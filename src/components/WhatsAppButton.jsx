@@ -11,7 +11,7 @@ const WhatsAppButton = () => {
     <div className="fixed bottom-6 right-6 z-50">
       <button
         onClick={handleClick}
-        className="relative cursor-pointer flex items-center justify-center bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-transform duration-300 hover:scale-110 cursor-pointer animate-pulse-custom"
+        className="relative cursor-pointer flex items-center justify-center bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-transform duration-300 hover:scale-110 animate-pulse-custom"
       >
         {/* Outer Glow / Zoom Effect */}
         <span className="absolute inset-0 rounded-full border-4 border-green-400 opacity-75 animate-ping"></span>

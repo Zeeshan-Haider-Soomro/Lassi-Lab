@@ -40,7 +40,7 @@ const OfferPopup = () => {
           Hurry up! Offer valid for a short time only.
         </p>
 
-        <button className="bg-red-600 cursor-pointer hover:bg-red-700 text-white px-6 py-2 rounded-lg shadow-md transition-transform duration-300 hover:scale-105 cursor-pointer">
+        <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-lg shadow-md transition-transform duration-300 hover:scale-105 cursor-pointer">
           Shop Now
         </button>
       </div>
