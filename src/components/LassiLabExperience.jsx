@@ -91,7 +91,7 @@ const LassiLabExperience = () => {
           >
             <button
               onClick={closeModal}
-              className="absolute -top-4 -right-4 bg-white rounded-full p-2 shadow text-black hover:bg-gray-100"
+              className="absolute cursor-pointer -top-4 -right-4 bg-white rounded-full p-2 shadow text-black hover:bg-gray-100"
             >
               ❌
             </button>

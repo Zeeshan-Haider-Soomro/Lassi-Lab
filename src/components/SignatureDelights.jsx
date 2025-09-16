@@ -53,7 +53,7 @@ const SignatureDelights = () => {
                 e.stopPropagation();
                 setSelectedItem(item);
               }}
-              className="mt-4 w-full bg-red-600 hover:bg-red-700 text-white py-2 rounded-lg transition"
+              className="mt-4 cursor-pointer w-full bg-red-600 hover:bg-red-700 text-white py-2 rounded-lg transition"
             >
               View Details
             </button>
@@ -67,7 +67,7 @@ const SignatureDelights = () => {
           <div className="bg-white max-w-md w-full p-6 rounded-2xl shadow-lg relative">
             <button
               onClick={() => setSelectedItem(null)}
-              className="absolute top-3 right-3 text-gray-500 hover:text-gray-700 text-xl font-bold"
+              className="cursor-pointer absolute top-3 right-3 text-gray-500 hover:text-gray-700 text-xl font-bold"
             >
               ×
             </button>
@@ -90,4 +90,3 @@ const SignatureDelights = () => {
 };
 
 export default SignatureDelights;
-    

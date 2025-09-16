@@ -17,10 +17,10 @@ const Hero = () => {
             Fresh Rabri Lassi with a perfect blend of tradition & modern taste.
           </p>
           <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
-            <button className="bg-red-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-800 transition w-full sm:w-auto">
+            <button className="bg-red-700 cursor-pointer text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-800 transition w-full sm:w-auto">
               Shop Now
             </button>
-            <button className="border border-red-700 text-red-700 px-6 py-3 rounded-lg font-semibold hover:bg-red-700 hover:text-white transition w-full sm:w-auto">
+            <button className="border cursor-pointer border-red-700 text-red-700 px-6 py-3 rounded-lg font-semibold hover:bg-red-700 hover:text-white transition w-full sm:w-auto">
               Learn More
             </button>
           </div>

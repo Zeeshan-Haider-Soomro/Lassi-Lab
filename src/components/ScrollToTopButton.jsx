@@ -67,8 +67,8 @@ const ScrollToTopButton = () => {
           className="transition-stroke duration-300 ease-out"
         />
       </svg>
-      <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center pointer-events-none">
-        <FaArrowUp className="text-red-600 text-xl" />
+      <div className="absolute top-0 left-0 cursor-pointer w-full h-full flex items-center justify-center pointer-events-none">
+        <FaArrowUp className="text-red-600 cursor-pointer text-xl" />
       </div>
     </button>
   );

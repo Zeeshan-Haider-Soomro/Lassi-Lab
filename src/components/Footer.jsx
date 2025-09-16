@@ -70,7 +70,7 @@ const Footer = () => {
             placeholder="Email Address"
             className="w-full mb-3 px-3 py-2 rounded text-black focus:outline-none"
           />
-          <button className="w-full bg-red-600 hover:bg-red-700 text-white py-2 rounded font-semibold transition duration-200">
+          <button className="w-full cursor-pointer bg-red-600 hover:bg-red-700 text-white py-2 rounded font-semibold transition duration-200">
             Subscribe
           </button>
 
