@@ -51,13 +51,13 @@ const Footer = () => {
           <h4 className="font-bold mb-3">CONNECT WITH US</h4>
           <ul className="space-y-2 text-sm">
             <li className="flex items-center gap-2">
-              <FaPhoneAlt className="text-red-500" /> +971 56 114 5090
+              <FaPhoneAlt className="text-red-500" /> +92 307 2372320
             </li>
             <li className="flex items-center gap-2">
-              <FaEnvelope className="text-red-500" /> support@firstsquat.com
+              <FaEnvelope className="text-red-500" /> lassilab@gmail.com
             </li>
             <li className="flex items-center gap-2">
-              <FaMapMarkerAlt className="text-red-500" /> FreeZone, Dubai, UAE
+              <FaMapMarkerAlt className="text-red-500 text-3xl mb-8" /> D2/24, Opposite Bank Islami, Near RCD Ground, Malir, Karachi, Pakistan
             </li>
           </ul>
         </div>

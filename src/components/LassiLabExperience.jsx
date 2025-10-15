@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
 const videoData = [
   {
@@ -19,10 +19,11 @@ const videoData = [
 ];
 
 const LassiLabExperience = () => {
-  const [activeVideo, setActiveVideo] = useState(null);
+  const [playingVideoId, setPlayingVideoId] = useState(null);
 
-  const openModal = (video) => setActiveVideo(video);
-  const closeModal = () => setActiveVideo(null);
+  const togglePlay = (id) => {
+    setPlayingVideoId((prev) => (prev === id ? null : id));
+  };
 
   return (
     <section className="py-12 px-4 text-center bg-white">
@@ -40,81 +41,46 @@ const LassiLabExperience = () => {
       <div className="flex justify-center items-center space-x-4 overflow-x-auto pb-6">
         {videoData.map((video, index) => {
           const isCenter = index === 1;
+          const isPlaying = playingVideoId === video.id;
 
           return (
             <div
               key={video.id}
               className={`relative rounded-xl overflow-hidden cursor-pointer shadow-md transition-transform duration-300 ${
                 isCenter
-                  ? 'w-72 md:w-96 scale-105 shadow-[0_8px_30px_rgba(255,0,0,0.2)]'
-                  : 'w-40 md:w-60'
+                  ? 'w-72 md:w-96 '
+                  : 'w-72 md:w-96 '
               }`}
-              onClick={() => openModal(video)}
+              onClick={() => togglePlay(video.id)}
             >
-              {video.type === 'video' ? (
-                <video
-                  src={video.videoUrl}
-                  className="w-full h-full object-cover"
-                  muted
-                  playsInline
-                  preload="metadata"
-                />
-              ) : (
+              {isPlaying ? (
                 <iframe
                   src={video.videoUrl}
-                  className="w-full h-48 md:h-64 pointer-events-none"
+                  className="w-full h-48 md:h-64"
                   allow="autoplay"
+                  allowFullScreen
                   title={`video-${video.id}`}
                 />
-              )}
-
-              {/* Play Overlay */}
-              <div className="absolute inset-0 flex items-center justify-center bg-black/20">
-                <div className="text-white text-3xl bg-black bg-opacity-50 rounded-full px-4 py-2">
-                  &#9658;
+              ) : (
+                <div className="relative">
+                  <iframe
+                    src={video.videoUrl}
+                    className="w-full h-48 md:h-64 pointer-events-none"
+                    allow="autoplay"
+                    title={`video-${video.id}`}
+                  />
+                  {/* Play Overlay */}
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/20">
+                    {/* <div className="text-white text-3xl bg-black bg-opacity-50 rounded-full px-4 py-2">
+                      &#9658;
+                    </div> */}
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           );
         })}
       </div>
-
-      {/* Modal */}
-      {activeVideo && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 backdrop-blur-sm"
-          onClick={closeModal}
-        >
-          <div
-            className="bg-transparent max-w-3xl w-[90%] relative"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              onClick={closeModal}
-              className="absolute cursor-pointer -top-4 -right-4 bg-white rounded-full p-2 shadow text-black hover:bg-gray-100"
-            >
-              ❌
-            </button>
-
-            {activeVideo.type === 'video' ? (
-              <video
-                src={activeVideo.videoUrl}
-                controls
-                autoPlay
-                className="w-full h-auto rounded-lg shadow-lg"
-              />
-            ) : (
-              <iframe
-                src={activeVideo.videoUrl}
-                allow="autoplay"
-                allowFullScreen
-                className="w-full aspect-video rounded-lg shadow-lg"
-                title="Lassi Lab Video"
-              ></iframe>
-            )}
-          </div>
-        </div>
-      )}
     </section>
   );
 };

@@ -4,31 +4,45 @@ import { FaStar } from "react-icons/fa";
 const testimonials = [
   {
     id: 1,
-    name: "Jennifer Haldoc",
-    image: "/images/user1.jpg", // ✅ apna image path daalna
-    rating: 4.0,
-    text: "Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development to fill empty spaces in a layout that does not yet have content.",
+    name: "Ali Khan",
+    rating: (Math.random() * 0.5 + 3.5).toFixed(1),
+    text: "Amazing service! Loved the quality and the prompt support. Highly recommended!",
   },
   {
     id: 2,
-    name: "Jennifer Haldoc",
-    image: "/images/user1.jpg",
-    rating: 4.0,
-    text: "Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development to fill empty spaces in a layout that does not yet have content.",
+    name: "Ayesha Malik",
+    rating: (Math.random() * 0.5 + 3.5).toFixed(1),
+    text: "Very professional and friendly team. They understood our needs perfectly.",
   },
   {
     id: 3,
-    name: "Jennifer Haldoc",
-    image: "/images/user1.jpg",
-    rating: 4.0,
-    text: "Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development to fill empty spaces in a layout that does not yet have content.",
+    name: "Hamza Siddiqui",
+    rating: (Math.random() * 0.5 + 3.5).toFixed(1),
+    text: "Great experience overall. The end product exceeded our expectations!",
   },
   {
     id: 4,
-    name: "Jennifer Haldoc",
-    image: "/images/user1.jpg",
-    rating: 4.0,
-    text: "Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development to fill empty spaces in a layout that does not yet have content.",
+    name: "Fatima Noor",
+    rating: (Math.random() * 0.5 + 3.5).toFixed(1),
+    text: "Exceptional work quality and very reliable. Will definitely use their services again.",
+  },
+  {
+    id: 5,
+    name: "Arham",
+    rating: (Math.random() * 0.5 + 3.5).toFixed(1),
+    text: "Superb work! Communication was smooth and results were exactly what I wanted.",
+  },
+  {
+    id: 6,
+    name: "Jahanzeb",
+    rating: (Math.random() * 0.5 + 3.5).toFixed(1),
+    text: "Really impressed with the professionalism and speed of delivery.",
+  },
+  {
+    id: 7,
+    name: "Umar Daim",
+    rating: (Math.random() * 0.5 + 3.5).toFixed(1),
+    text: "The team went above and beyond. Highly recommend for anyone looking for quality work.",
   },
 ];
 
@@ -46,25 +60,23 @@ const Testimonials = () => {
         </div>
       </div>
 
-      {/* Grid of Testimonials */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+      {/* Horizontal Scroll Testimonials */}
+      <div className="flex space-x-6 overflow-x-auto scrollbar-hide pb-6">
         {testimonials.map((t) => (
           <div
             key={t.id}
-            className="bg-white rounded-2xl shadow-lg p-6 flex flex-col space-y-4"
+            className="flex-shrink-0 w-80 md:w-96 bg-white rounded-2xl shadow-lg p-6 flex flex-col space-y-4"
           >
             {/* User Info */}
             <div className="flex items-center space-x-4">
-              <img
-                src={t.image}
-                alt={t.name}
-                className="h-12 w-12 rounded-full object-cover"
-              />
               <div>
                 <h4 className="font-semibold text-gray-900">{t.name}</h4>
                 <div className="flex items-center text-yellow-500 text-sm">
-                  {[...Array(4)].map((_, i) => (
-                    <FaStar key={i} />
+                  {Array.from({ length: 5 }, (_, i) => (
+                    <FaStar
+                      key={i}
+                      className={i < Math.floor(t.rating) ? "" : "text-gray-300"}
+                    />
                   ))}
                 </div>
               </div>
