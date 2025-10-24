@@ -7,21 +7,49 @@ const SignatureDelights = () => {
     {
       id: 1,
       name: "Royal Falooda",
-      image: "/images/falooda-1.png",
+      image: "/images/products/_DSC2056.JPG",
       description:
         "A royal treat layered with silky vermicelli, creamy kulfi, rose syrup, and crunchy nuts—every spoon a burst of flavor and tradition.",
     },
     {
       id: 2,
       name: "Rabri Lassi",
-      image: "/images/falooda-2.png",
+      image: "/images/products/1.png",
       description:
         "Our signature creamy rabri lassi served chilled with a perfect blend of traditional flavors and modern presentation.",
     },
     {
       id: 3,
       name: "Rose Kulfi",
-      image: "/images/falooda-3.png",
+      image: "/images/products/3.png",
+      description:
+        "Soft, creamy rose kulfi topped with rose petals for a refreshing, aromatic experience.",
+    },
+    {
+      id: 3,
+      name: "Rose Kulfi",
+      image: "/images/products/Leonardo_Kino_XL_Closeup_White_Lassi_Glass_tall_transparent_g_0.jpg",
+      description:
+        "Soft, creamy rose kulfi topped with rose petals for a refreshing, aromatic experience.",
+    },
+    {
+      id: 3,
+      name: "Rose Kulfi",
+      image: "/images/products/Leonardo_Kino_XL_Luxury_Lassi_Glass_Presentation_crystalclear_2.jpg",
+      description:
+        "Soft, creamy rose kulfi topped with rose petals for a refreshing, aromatic experience.",
+    },
+    {
+      id: 3,
+      name: "Rose Kulfi",
+      image: "/images/products/Leonardo_Kino_XL_Traditional_Festive_Rabri_Kulfi_clay_plate_w_0.jpg",
+      description:
+        "Soft, creamy rose kulfi topped with rose petals for a refreshing, aromatic experience.",
+    },
+    {
+      id: 3,
+      name: "Rose Kulfi",
+      image: "/images/products/Leonardo_Kino_XL_Traditional_Festive_Rabri_Kulfi_clay_plate_w_1.jpg",
       description:
         "Soft, creamy rose kulfi topped with rose petals for a refreshing, aromatic experience.",
     },
@@ -43,7 +71,8 @@ const SignatureDelights = () => {
               <img
                 src={item.image}
                 alt={item.name}
-                className="w-full h-48 object-contain transform hover:scale-110 transition-transform duration-300"
+                className="w-full h-60 object-cover object-center rounded-xl transform hover:scale-105 transition-transform duration-300"
+
               />
             </div>
             <h3 className="text-lg font-semibold mt-4">{item.name}</h3>
