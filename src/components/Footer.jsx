@@ -68,7 +68,7 @@ const Footer = () => {
           <input
             type="email"
             placeholder="Email Address"
-            className="w-full mb-3 px-3 py-2 rounded text-black focus:outline-none"
+            className="w-full mb-3 px-3 py-2 rounded text-white focus:outline-none"
           />
           <button className="w-full cursor-pointer bg-red-600 hover:bg-red-700 text-white py-2 rounded font-semibold transition duration-200">
             Subscribe
@@ -76,10 +76,8 @@ const Footer = () => {
 
           {/* Social Icons */}
           <div className="flex gap-3 mt-4 justify-start md:justify-start">
-            <a href="#"><FaTwitter className="text-white hover:text-red-500 text-lg" /></a>
-            <a href="#"><FaInstagram className="text-white hover:text-red-500 text-lg" /></a>
-            <a href="#"><FaLinkedinIn className="text-white hover:text-red-500 text-lg" /></a>
-            <a href="#"><FaFacebookF className="text-white hover:text-red-500 text-lg" /></a>
+            <a href="https://www.instagram.com/lassilabmalir/"><FaInstagram className="text-white hover:text-red-500 text-lg" /></a>
+            <a href="https://www.facebook.com/lassilabmalir"><FaFacebookF className="text-white hover:text-red-500 text-lg" /></a>
           </div>
         </div>
       </div>
