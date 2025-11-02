@@ -11,8 +11,6 @@ const Contact = () => {
             <ContactForm />
             <LassiLabExperience />
             <Testimonials />
-
-
         </div>
     )
 }
